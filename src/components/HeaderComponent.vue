@@ -19,7 +19,7 @@ export default {
 				Logo
 			</h1>
 		</div>
-		<nav>
+		<nav class="me-5">
 			<ul>
 				<li>
 					<RouterLink :to="{ name:'home'}">

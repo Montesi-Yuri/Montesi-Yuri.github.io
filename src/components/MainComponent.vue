@@ -3,19 +3,19 @@ import { RouterView } from 'vue-router';
 
 
 export default {
-  data() {
-    return {
-    }
-  },
-  components:{
-    RouterView
-}
+	data() {
+		return {
+		}
+	},
+	components:{
+		RouterView
+	}
 }
 
 </script>
 
 <template>
-  <RouterView></RouterView>
+  	<RouterView></RouterView>
 </template>
 
 <style lang="scss" scoped>

@@ -8,6 +8,12 @@ export default {
 		
 		}
 	},
+	methods:{
+        getImgPath: function(src) {
+            console.log(new URL(`${src}`, import.meta.url).href);
+            return new URL(`${src}`, import.meta.url).href
+        },
+    }
 }
 
 </script>
@@ -15,9 +21,9 @@ export default {
 <template>
 	<header>
 		<div class="header-logo ms-5">
-			<h1 class="text-center leading-10 ">
-				Logo
-			</h1>
+			<div class="main-logo">
+				<img :src="getImgPath('../assets/img/logoTrasp.png')" alt="Yuri-Montesi">
+			</div>
 		</div>
 		<nav class="me-5">
 			<ul>
@@ -49,17 +55,32 @@ header{
 	padding: 20px;
 	display: flex;
 
+	.main-logo{
+		width: 120px;
+		height: 120px;
+		background-color: black;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	nav{
+		display: flex;
+		align-items: center;
+	}
+
 	ul{
 		display: flex;
 		
 		li{
+			margin: 0px 20px;
 			padding: 8px 16px;
-			border-radius: 12px;
 			cursor:pointer;
 
 			&:hover{
-				color: white;
-				background-color:purple;
+				color: purple;
+				border-bottom: 3px solid purple;
 				transition: 0.2s ease-in-out;
 			}
 		}

@@ -17,14 +17,14 @@ export default {
 
 <template>
     <div class="my-container">
-        <h2 class="text-center font-bold my-4 text-lg">
+        <h2 class="text-center font-bold my-10 text-xl text-white">
             Projects
         </h2>
 
         <section class="projects-wrapper">
             <div class="project">
-                <div class="w-1/2">
-                    <h3 class="text-center font-bold my-4">Phlox Corporate</h3>
+                <div class="w-1/2 mx-4">
+                    <h2 class="text-center font-bold text-lg my-4">Phlox Corporate</h2>
 
                     <h5 class="font-bold">
                         Obbiettivo:
@@ -36,21 +36,20 @@ export default {
                     <h5 class="font-bold mt-5">
                         Tecnologie utilizzate:
                     </h5>
-                    <div class="px-5 flex">
-                        <div class="logo-tech">
+                    <div class="px-5 mb-5">
+                        <p>Vue</p>
+                        <p>Tailwind Css</p>
+                        <!-- <div class="logo-tech">
                             <img :src="getImgPath('../assets/img/vue.png')" alt=""> 
                         </div>
                         <div class="logo-tech">
                             <img :src="getImgPath('../assets/img/tw-css.png')" alt="">
-                        </div>  
+                        </div>   -->
                     </div>
 
-                    <div class="flex justify-around my-10">
+                    <div class="flex justify-center my-10">
                         <button class="btn">
                             Show More
-                        </button>
-                        <button class="btn">
-                            I want one too
                         </button>
                     </div>
                 </div>

@@ -11,11 +11,19 @@ export default {
 
 <template>
     <div class="container">
-        <h1>
-            HomePage
-        </h1>
+        <h2 class="text-center text-white text-lg my-12">
+            About Me
+        </h2>
+        <p class="text-white">
+            Sono uno sviluppatore web junior di 24 anni con passione per la
+            pianificazione e lo sviluppo pratico di idee o progetti. Prima di
+            intraprendere questa nuova carriera ho lavorato in un settore
+            completamente diverso. La mia esperienza in precedenza mi ha
+            insegnato l'importanza del duro lavoro, della precisione e della
+            gestione del tempo, qualità che ora applico nella mia attuale
+            professione.
+        </p>
     </div>
-    
 </template>
 
 <style scoped lang="scss">

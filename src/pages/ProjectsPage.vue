@@ -118,7 +118,6 @@ export default {
 </template>
 
 <style scoped lang="scss">
-@use '../assets/scss/main.scss';
 
 .my-container{
     max-width: 1140px;

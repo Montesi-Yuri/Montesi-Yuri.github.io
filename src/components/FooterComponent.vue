@@ -1,18 +1,16 @@
 <script>
 
 export default {
-  data() {
-    return {
-    }
-  },
-  components:{
-  }
-}
+	data() {
+		return {
 
+		}
+	},
+}
 </script>
 
 <template>
-  
+	
 </template>
 
 <style lang="scss" scoped>

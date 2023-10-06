@@ -57,7 +57,7 @@ export default {
                 </div>
                 <div class="miniature">
                     <div class="img-wrapper">
-                        <img src="@/assets/img/PhloxCorporate.png" alt="">
+                        <img src="/PhloxCorporate.png" alt="">
                     </div>
                 </div>
             </div>

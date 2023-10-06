@@ -6,12 +6,6 @@ export default {
 
         }
     },
-    methods:{
-        // getImgPath: function(src) {
-        //     console.log(new URL(`${src}`, import.meta.url).href);
-        //     return new URL(`${src}`, import.meta.url).href
-        // },
-    }
 }
 </script>
 
@@ -95,7 +89,7 @@ export default {
                 </div>
                 <div class="miniature">
                     <div class="img-wrapper">
-                        <img :src="getImgPath('../assets/img/marathonthegame.png')" alt="">
+                        <img src="/marathonthegame.png" alt="">
                     </div>
                 </div>
             </div>
@@ -133,7 +127,7 @@ export default {
                 </div>
                 <div class="miniature">
                     <div class="img-wrapper">
-                        <img :src="getImgPath('../assets/img/PhloxCorporate.png')" alt="">
+                        <img src="/PhloxCorporate.png" alt="">
                     </div>
                 </div>
             </div>

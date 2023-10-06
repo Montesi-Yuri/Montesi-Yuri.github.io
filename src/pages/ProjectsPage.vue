@@ -48,6 +48,84 @@ export default {
                     </div>
 
                     <div class="flex justify-center my-10">
+                        <a href="">
+                            <button class="btn">
+                                Show More
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="miniature">
+                    <div class="img-wrapper">
+                        <img :src="getImgPath('../assets/img/PhloxCorporate.png')" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="w-1/2 mx-4">
+                    <h2 class="text-center font-bold text-lg my-4">Project</h2>
+
+                    <h5 class="font-bold">
+                        Obbiettivo:
+                    </h5>
+                    <p class="font-normal px-5">
+                        Replicare lo stile ricevuto dal designer
+                    </p>
+
+                    <h5 class="font-bold mt-5">
+                        Tecnologie utilizzate:
+                    </h5>
+                    <div class="px-5 mb-5">
+                        <p>Vue</p>
+                        <p>Tailwind Css</p>
+                        <!-- <div class="logo-tech">
+                            <img :src="getImgPath('../assets/img/vue.png')" alt=""> 
+                        </div>
+                        <div class="logo-tech">
+                            <img :src="getImgPath('../assets/img/tw-css.png')" alt="">
+                        </div>   -->
+                    </div>
+
+                    <div class="flex justify-center my-10">
+                        <button class="btn">
+                            Show More
+                        </button>
+                    </div>
+                </div>
+                <div class="miniature">
+                    <div class="img-wrapper">
+                        <img :src="getImgPath('../assets/img/marathonthegame.png')" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="w-1/2 mx-4">
+                    <h2 class="text-center font-bold text-lg my-4">Phlox Corporate</h2>
+
+                    <h5 class="font-bold">
+                        Obbiettivo:
+                    </h5>
+                    <p class="font-normal px-5">
+                        Replicare lo stile ricevuto dal designer
+                    </p>
+
+                    <h5 class="font-bold mt-5">
+                        Tecnologie utilizzate:
+                    </h5>
+                    <div class="px-5 mb-5">
+                        <p>Vue</p>
+                        <p>Tailwind Css</p>
+                        <!-- <div class="logo-tech">
+                            <img :src="getImgPath('../assets/img/vue.png')" alt=""> 
+                        </div>
+                        <div class="logo-tech">
+                            <img :src="getImgPath('../assets/img/tw-css.png')" alt="">
+                        </div>   -->
+                    </div>
+
+                    <div class="flex justify-center my-10">
                         <button class="btn">
                             Show More
                         </button>
@@ -84,6 +162,22 @@ export default {
     background-color: bisque;
     display: flex;
     padding: 20px;
+    margin: 30px 0px;
+    border-radius: 16px;
+}
+
+::-webkit-scrollbar{
+    width: 1em;
+}
+::-webkit-scrollbar-track{
+    background-color: rgba(206, 206, 203, 0.651);
+    border-radius: 100vh;
+    margin-block: 0.5em;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(42, 176, 185);
+    border-radius: 100vh;
+    border: 0.15em solid rgba(206, 206, 203, 0.651);
 }
 
 .btn{

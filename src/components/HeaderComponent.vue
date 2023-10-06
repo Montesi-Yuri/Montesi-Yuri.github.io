@@ -8,12 +8,6 @@ export default {
 		
 		}
 	},
-	methods:{
-        getImgPath: function(src) {
-            console.log(new URL(`${src}`, import.meta.url).href);
-            return new URL(`${src}`, import.meta.url).href
-        },
-    }
 }
 
 </script>
@@ -22,7 +16,7 @@ export default {
 	<header>
 		<div class="header-logo ms-5">
 			<div class="main-logo">
-				<img :src="getImgPath('../assets/img/logoTrasp.png')" alt="Yuri-Montesi">
+				<img src="/logoTrasp.png" alt="Yuri-Montesi">
 			</div>
 		</div>
 		<nav class="me-5">

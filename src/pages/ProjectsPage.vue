@@ -7,10 +7,10 @@ export default {
         }
     },
     methods:{
-        getImgPath: function(src) {
-            console.log(new URL(`${src}`, import.meta.url).href);
-            return new URL(`${src}`, import.meta.url).href
-        },
+        // getImgPath: function(src) {
+        //     console.log(new URL(`${src}`, import.meta.url).href);
+        //     return new URL(`${src}`, import.meta.url).href
+        // },
     }
 }
 </script>

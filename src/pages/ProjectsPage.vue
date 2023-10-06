@@ -57,7 +57,7 @@ export default {
                 </div>
                 <div class="miniature">
                     <div class="img-wrapper">
-                        <img :src="getImgPath('/assets/img/PhloxCorporate.png')" alt="">
+                        <img src="/assets/img/PhloxCorporate.png" alt="">
                     </div>
                 </div>
             </div>

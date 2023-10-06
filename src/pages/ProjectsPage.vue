@@ -33,12 +33,6 @@ export default {
                     <div class="px-5 mb-5">
                         <p>Vue</p>
                         <p>Tailwind Css</p>
-                        <!-- <div class="logo-tech">
-                            <img :src="getImgPath('../assets/img/vue.png')" alt=""> 
-                        </div>
-                        <div class="logo-tech">
-                            <img :src="getImgPath('../assets/img/tw-css.png')" alt="">
-                        </div>   -->
                     </div>
 
                     <div class="flex justify-center my-10">
@@ -73,12 +67,6 @@ export default {
                     <div class="px-5 mb-5">
                         <p>Vue</p>
                         <p>Tailwind Css</p>
-                        <!-- <div class="logo-tech">
-                            <img :src="getImgPath('../assets/img/vue.png')" alt=""> 
-                        </div>
-                        <div class="logo-tech">
-                            <img :src="getImgPath('../assets/img/tw-css.png')" alt="">
-                        </div>   -->
                     </div>
 
                     <div class="flex justify-center my-10">
@@ -111,12 +99,6 @@ export default {
                     <div class="px-5 mb-5">
                         <p>Vue</p>
                         <p>Tailwind Css</p>
-                        <!-- <div class="logo-tech">
-                            <img :src="getImgPath('../assets/img/vue.png')" alt=""> 
-                        </div>
-                        <div class="logo-tech">
-                            <img :src="getImgPath('../assets/img/tw-css.png')" alt="">
-                        </div>   -->
                     </div>
 
                     <div class="flex justify-center my-10">

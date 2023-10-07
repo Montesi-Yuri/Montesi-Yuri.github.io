@@ -10,8 +10,9 @@ export default {
 </script>
 
 <template>
-    <div class="container">
-        <h2 class="text-center text-white text-lg my-12">
+    <div class="container px-10">
+        <div>
+            <h2 class="text-center text-white text-lg my-12">
             About Me
         </h2>
         <p class="text-white">
@@ -23,6 +24,35 @@ export default {
             gestione del tempo, qualità che ora applico nella mia attuale
             professione.
         </p>
+        </div>
+        <div>
+            <div>
+                <h3>
+                    Tecnologie Conosciute:
+                </h3>
+                <div>
+                    <span>
+                        html
+                    </span>
+                    <span>
+                        Css
+                    </span>
+                    <span>
+                        Vue
+                    </span>
+                    <span>
+                        Php
+                    </span>
+                    <span>
+                        Laravel
+                    </span>
+
+                </div>
+            </div>
+            <div>
+                Il mio GitHub
+            </div>
+        </div>
     </div>
 </template>
 

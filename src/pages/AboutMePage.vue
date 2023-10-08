@@ -12,7 +12,7 @@ export default {
 <template>
     <section class="projects-wrapper">
         <div class="project">
-            <div class="w-1/2 mx-4">
+            <!-- <div class="w-1/2 mx-4">
                 <h2 class="text-center font-bold text-lg my-4">Phlox Corporate</h2>
 
                 <h5 class="font-bold">
@@ -42,7 +42,7 @@ export default {
                 <div class="img-wrapper">
                     <img src="/PhloxCorporate.png" alt="">
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 </template>

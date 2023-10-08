@@ -10,53 +10,53 @@ export default {
 </script>
 
 <template>
-    <div class="container px-10">
-        <div>
-            <h2 class="text-center text-white text-lg my-12">
-            About Me
-        </h2>
-        <p class="text-white">
-            Sono uno sviluppatore web junior di 24 anni con passione per la
-            pianificazione e lo sviluppo pratico di idee o progetti. Prima di
-            intraprendere questa nuova carriera ho lavorato in un settore
-            completamente diverso. La mia esperienza in precedenza mi ha
-            insegnato l'importanza del duro lavoro, della precisione e della
-            gestione del tempo, qualità che ora applico nella mia attuale
-            professione.
-        </p>
-        </div>
-        <div>
-            <div>
-                <h3>
-                    Tecnologie Conosciute:
-                </h3>
-                <div>
-                    <span>
-                        html
-                    </span>
-                    <span>
-                        Css
-                    </span>
-                    <span>
-                        Vue
-                    </span>
-                    <span>
-                        Php
-                    </span>
-                    <span>
-                        Laravel
-                    </span>
-
-                </div>
+    <div class="px-5 flex flex-wrap justify-center">
+        <section class="my-info w-full lg:w-2/5 bg-slate-600">
+            <h2 class="text-center py-5">
+                About Me
+            </h2>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium nam est perspiciatis dolorum quibusdam earum eum aperiam tempore id expedita.
+            </p>
+        </section>
+        <section class="my-info w-full lg:w-2/5 bg-blue-200">
+            <h2 class="text-center text-lg font-bold pt-2">
+                Tecnologies stack
+            </h2>
+            <div class="icons">
+                <img src="/html-5-svgrepo-com.svg" alt="html">
+                <img src="/css-3-svgrepo-com.svg" alt="css">
+                <img src="/php-1-logo-svgrepo-com.svg" alt="php">
+                <img src="/mysql-logo-svgrepo-com.svg" alt="mysql">
+                <img src="/javascript-svgrepo-com.svg" alt="javascript">
+                <img src="/bootstrap-svgrepo-com.svg" alt="bootstrap">
+                <img src="/tailwind-svgrepo-com.svg" alt="tailwind">
+                <img src="/sass-svgrepo-com.svg" alt="sass">
+                <img src="/vue-svgrepo-com.svg" alt="vue">
+                <img src="/laravel-svgrepo-com.svg" alt="laravel">
             </div>
-            <div>
-                Il mio GitHub
-            </div>
-        </div>
+        </section>
     </div>
 </template>
 
 <style scoped lang="scss">
 @use '../assets/scss/main.scss';
 
+.my-info{
+    padding: 15px;
+    border-radius: 16px;
+    margin: 10px;
+}
+
+.icons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px 0px;
+
+    img{
+        width: 50px;
+        margin: 15px;
+    }
+}
 </style>

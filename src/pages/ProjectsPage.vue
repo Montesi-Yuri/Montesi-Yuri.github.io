@@ -15,7 +15,17 @@ export default {
             Projects
         </h2>
 
-        <section class="projects-wrapper">
+
+
+
+
+
+
+
+
+
+        
+        <!-- <section class="projects-wrapper">
             <div class="project">
                 <div class="w-1/2 mx-4">
                     <h2 class="text-center font-bold text-lg my-4">Phlox Corporate</h2>
@@ -113,7 +123,7 @@ export default {
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
     </div>
 </template>
 
@@ -121,7 +131,8 @@ export default {
 
 .my-container{
     max-width: 1140px;
-    margin: auto;
+    margin: 20px;
+    
 }
 .img-wrapper{
     margin: 0;

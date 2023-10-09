@@ -9,9 +9,9 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
-
   },
   "dependencies": {
+    "swiper": "^10.3.1",
     "vue": "^3.3.4",
     "vue-router": "^4.2.5"
   },

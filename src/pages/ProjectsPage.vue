@@ -1,4 +1,14 @@
 <script>
+import { Swiper, SwiperSlide } from 'swiper/vue';
+
+// Import Swiper styles
+import 'swiper/css';
+
+import 'swiper/css/pagination';
+
+// import required modules
+import { Pagination, Navigation } from 'swiper/modules';
+
 export default {
     name: 'ProjectsPage',
     data(){
@@ -6,27 +16,26 @@ export default {
 
         }
     },
+    components:{
+        Swiper,
+        SwiperSlide
+    },
+    setup() {
+      return {
+        modules: [
+            Pagination,
+            Navigation
+        ],
+      };
+    },
 }
 </script>
 
 <template>
     <div class="my-container">
-        <h2 class="text-center font-bold my-10 text-xl text-white">
-            Projects
-        </h2>
-
-
-
-
-
-
-
-
-
-
-        
-        <!-- <section class="projects-wrapper">
-            <div class="project">
+        <swiper :pagination="true" :modules="modules" class="mySwiper">
+            <swiper-slide>
+                <div class="project">
                 <div class="w-1/2 mx-4">
                     <h2 class="text-center font-bold text-lg my-4">Phlox Corporate</h2>
 
@@ -59,8 +68,10 @@ export default {
                     </div>
                 </div>
             </div>
-
-            <div class="project">
+            </swiper-slide>
+            
+            <swiper-slide>
+                <div class="project">
                 <div class="w-1/2 mx-4">
                     <h2 class="text-center font-bold text-lg my-4">Project</h2>
 
@@ -91,8 +102,10 @@ export default {
                     </div>
                 </div>
             </div>
+            </swiper-slide>
 
-            <div class="project">
+            <swiper-slide>
+                <div class="project">
                 <div class="w-1/2 mx-4">
                     <h2 class="text-center font-bold text-lg my-4">Phlox Corporate</h2>
 
@@ -123,7 +136,9 @@ export default {
                     </div>
                 </div>
             </div>
-        </section> -->
+            </swiper-slide>
+           
+        </swiper>
     </div>
 </template>
 
@@ -132,7 +147,6 @@ export default {
 .my-container{
     max-width: 1140px;
     margin: 20px;
-    
 }
 .img-wrapper{
     margin: 0;
@@ -145,7 +159,7 @@ export default {
 }
 
 .project{
-    background-color: bisque;
+    background-color: rgba(92, 91, 91, 0.74);
     display: flex;
     padding: 20px;
     margin: 30px 0px;

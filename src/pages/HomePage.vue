@@ -31,7 +31,7 @@ export default {
                 </div>
                 <div class="text-center">
                     <a href="https://www.linkedin.com/in/yuri-montesi-621248294/">
-                        <img src="/icons8-linkedin (1).svg" alt="github">
+                        <img src="/linkedin.svg" alt="github">
                     </a>
                     Linkedin
                 </div>

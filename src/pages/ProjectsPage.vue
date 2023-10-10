@@ -146,7 +146,7 @@ export default {
 
 .my-container{
     max-width: 1140px;
-    margin: 20px;
+    margin: 20px auto;
 }
 .img-wrapper{
     margin: 0;

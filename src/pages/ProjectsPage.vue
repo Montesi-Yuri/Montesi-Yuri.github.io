@@ -13,7 +13,27 @@ export default {
     name: 'ProjectsPage',
     data(){
         return{
-
+            projects: [
+                {
+                    name: 'BDeveloper',
+                    images : [
+                        'src/assets/img/bdev-images/bdev-homepage.png',
+                        'src/assets/img/bdev-images/bdev-ricerca.png',
+                        'src/assets/img/bdev-images/bdev-dashboard.png',
+                        'src/assets/img/bdev-images/bdev-dashboard-light.png',
+                        'src/assets/img/bdev-images/bdev-dashboard-mobile.png',
+                        'src/assets/img/bdev-images/bdev-dashboard-tablet.png',
+                        'src/assets/img/bdev-images/bdev-statistiche.png',
+                        'src/assets/img/bdev-images/bdev-sponsor.png',
+                        'src/assets/img/bdev-images/bdev-sviluppatore.png',
+                        'src/assets/img/bdev-images/bdev-mod.profilo.png',
+                        'src/assets/img/bdev-images/bdev-mod.profilo-2.png',
+                    ]
+                },
+                {
+                    name: 'Phlox Corporate',
+                }
+            ]
         }
     },
     components:{
@@ -32,138 +52,70 @@ export default {
 </script>
 
 <template>
-    <div class="my-container">
-        <swiper :pagination="true" :modules="modules" class="mySwiper">
-            <swiper-slide>
-                <div class="project">
-                <div class="w-1/2 mx-4">
-                    <h2 class="text-center font-bold text-lg my-4">Phlox Corporate</h2>
+    <div class="container mx-auto md:px-12">
+        <h1 class="text-3xl text-center font-bold text-white md:mt-12 mt-4">
+            Progetti
+        </h1>
+        <section class="project" v-for="project in projects">
+            <div class="w-full mx-4 text-white">
+                <h2 class="font-bold text-lg mt-4 text-amber-400">Progetto: </h2>
+                <p class="px-5">{{ project.name }}</p>
 
-                    <h5 class="font-bold">
-                        Obbiettivo:
-                    </h5>
-                    <p class="font-normal px-5">
-                        Replicare lo stile ricevuto dal designer
-                    </p>
+                <h5 class="font-bold text-lg mt-4 text-amber-400">Obbiettivo:</h5>
+                <p class="font-normal px-5">
+                    Costruire un'applicazione web dove in front-office possiamo cercare uno sviluppatore specializzato in un determinato ambito lavorativo e chiedergli un appuntamento e nel back-office lo sviluppatore ha la possibilità di:
+                </p>
+                <ul class="px-5">
+                    <li>
+                        - Creare il suo profilo e gestire i suoi dati,
+                    </li>
+                    <li>
+                        - Vedere i messaggi ricevuti,
+                    </li>
+                    <li>
+                        - Vedere le recensioni rilasciate su di lui,
+                    </li>
+                    <li>
+                        - Vedere le sue statistiche di andamento,
+                    </li>
+                    <li>
+                        - Sottoscrivere un abbonamento per aumentare la visibiltà del proprio profilo.
+                    </li>
+                </ul>
 
-                    <h5 class="font-bold mt-5">
-                        Tecnologie utilizzate:
-                    </h5>
-                    <div class="px-5 mb-5">
-                        <p>Vue</p>
-                        <p>Tailwind Css</p>
-                    </div>
-
-                    <div class="flex justify-center my-10">
-                        <a href="">
-                            <button class="btn">
-                                Show More
-                            </button>
-                        </a>
-                    </div>
-                </div>
-                <div class="miniature">
-                    <div class="img-wrapper">
-                        <img src="/PhloxCorporate.png" alt="">
-                    </div>
-                </div>
-            </div>
-            </swiper-slide>
-            
-            <swiper-slide>
-                <div class="project">
-                <div class="w-1/2 mx-4">
-                    <h2 class="text-center font-bold text-lg my-4">Project</h2>
-
-                    <h5 class="font-bold">
-                        Obbiettivo:
-                    </h5>
-                    <p class="font-normal px-5">
-                        Replicare lo stile ricevuto dal designer
-                    </p>
-
-                    <h5 class="font-bold mt-5">
-                        Tecnologie utilizzate:
-                    </h5>
-                    <div class="px-5 mb-5">
-                        <p>Vue</p>
-                        <p>Tailwind Css</p>
-                    </div>
-
-                    <div class="flex justify-center my-10">
-                        <button class="btn">
-                            Show More
-                        </button>
-                    </div>
-                </div>
-                <div class="miniature">
-                    <div class="img-wrapper">
-                        <img src="/marathonthegame.png" alt="">
-                    </div>
+                <h5 class="font-bold text-lg mt-5 text-amber-400">
+                    Tecnologie utilizzate:
+                </h5>
+                <div class="px-5 mb-5">
+                    <p>Laravel</p>
+                    <p>Vue</p>
+                    <p>Tailwind Css</p>
+                    <p>Chart.js (Libreria)</p>
                 </div>
             </div>
-            </swiper-slide>
-
-            <swiper-slide>
-                <div class="project">
-                <div class="w-1/2 mx-4">
-                    <h2 class="text-center font-bold text-lg my-4">Phlox Corporate</h2>
-
-                    <h5 class="font-bold">
-                        Obbiettivo:
-                    </h5>
-                    <p class="font-normal px-5">
-                        Replicare lo stile ricevuto dal designer
-                    </p>
-
-                    <h5 class="font-bold mt-5">
-                        Tecnologie utilizzate:
-                    </h5>
-                    <div class="px-5 mb-5">
-                        <p>Vue</p>
-                        <p>Tailwind Css</p>
-                    </div>
-
-                    <div class="flex justify-center my-10">
-                        <button class="btn">
-                            Show More
-                        </button>
-                    </div>
-                </div>
-                <div class="miniature">
-                    <div class="img-wrapper">
-                        <img src="/PhloxCorporate.png" alt="">
-                    </div>
-                </div>
-            </div>
-            </swiper-slide>
-           
-        </swiper>
+            <swiper :pagination="true" :modules="modules" class="mySwiper">
+                <template v-for="image in project.images">
+                    <swiper-slide>
+                        <div class="p-5">
+                            <img :src="image" alt="">
+                        </div>
+                    </swiper-slide>
+                </template>
+            </swiper>
+        </section>
     </div>
 </template>
 
 <style scoped lang="scss">
 
-.my-container{
-    max-width: 1140px;
-    margin: 20px auto;
-}
-.img-wrapper{
-    margin: 0;
-    padding: 20px;
-    
-    img{
-        width: 100%;
-        border-radius: 12px;
-    };
-}
-
 .project{
-    background-color: rgba(92, 91, 91, 0.74);
     display: flex;
+    flex-wrap: wrap;
     padding: 20px;
     margin: 30px 0px;
     border-radius: 16px;
+    background-color: rgba(7, 7, 7, 0.685);
+    box-shadow: 5px 5px 15px black;
 }
 
 ::-webkit-scrollbar{
@@ -188,21 +140,12 @@ export default {
 
     &:hover{
         color: white;
-        -webkit-box-shadow: 10px 10px 16px -5px rgba(217,117,222);
-        -moz-box-shadow: 10px 10px 16px -5px rgba(217,117,222);
-        box-shadow: 10px 10px 16px -5px rgba(217,117,222);
+        -webkit-box-shadow: 0px 0px 16px -5px rgba(217,117,222);
+        -moz-box-shadow: 0px 0px 16px -5px rgba(217,117,222);
+        box-shadow: 0px 0px 16px -5px rgba(217,117,222);
+        transition: 0.2s ease-in-out;
     }
 }
-
-.miniature{
-    width: 50%;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    overflow: auto;
-    
-}
-
 .logo-tech{
     width: 50px;
     margin: 10px;

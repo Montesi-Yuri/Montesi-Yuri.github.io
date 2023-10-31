@@ -32,6 +32,16 @@ export default {
                 },
                 {
                     name: 'Phlox Corporate',
+                    images : [
+                        'src/assets/img/phlox-images/phlox-1.png',
+                        'src/assets/img/phlox-images/phlox-2.png',
+                        'src/assets/img/phlox-images/phlox-3.png',
+                        'src/assets/img/phlox-images/phlox-4.png',
+                        'src/assets/img/phlox-images/phlox-5.png',
+                        'src/assets/img/phlox-images/phlox-6.png',
+                        'src/assets/img/phlox-images/phlox-7.png',
+                        'src/assets/img/phlox-images/phlox-8.png',
+                    ]
                 }
             ]
         }
@@ -63,34 +73,15 @@ export default {
 
                 <h5 class="font-bold text-lg mt-4 text-amber-400">Obbiettivo:</h5>
                 <p class="font-normal px-5">
-                    Costruire un'applicazione web dove in front-office possiamo cercare uno sviluppatore specializzato in un determinato ambito lavorativo e chiedergli un appuntamento e nel back-office lo sviluppatore ha la possibilità di:
+                    Replicare l'immagine fornita dal designer utilizzando le tecnologie sotto elencate
                 </p>
-                <ul class="px-5">
-                    <li>
-                        - Creare il suo profilo e gestire i suoi dati,
-                    </li>
-                    <li>
-                        - Vedere i messaggi ricevuti,
-                    </li>
-                    <li>
-                        - Vedere le recensioni rilasciate su di lui,
-                    </li>
-                    <li>
-                        - Vedere le sue statistiche di andamento,
-                    </li>
-                    <li>
-                        - Sottoscrivere un abbonamento per aumentare la visibiltà del proprio profilo.
-                    </li>
-                </ul>
 
                 <h5 class="font-bold text-lg mt-5 text-amber-400">
                     Tecnologie utilizzate:
                 </h5>
                 <div class="px-5 mb-5">
-                    <p>Laravel</p>
                     <p>Vue</p>
                     <p>Tailwind Css</p>
-                    <p>Chart.js (Libreria)</p>
                 </div>
             </div>
             <swiper :pagination="true" :modules="modules" class="mySwiper">

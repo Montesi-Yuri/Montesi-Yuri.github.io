@@ -16,6 +16,7 @@ export default {
                     name: 'BDeveloper',
                     goal : "Creare una applicazione web divisa in front office e back office, in cui abbiamo 2 utenti: nel front office l'utente interessato che ha bisogno dei servizi deve essere in grado di ricercare lo sviluppatore in base al campo di lavoro, poterlo contattare e/o lasciare una recensione. Nel back office l'utente registrato può vedere i messaggi ricevuti, le recensioni, le sue statistiche di andamento e modificare le informazioni del suo profilo.",
                     tecnologies:['Laravel', 'Tailwind CSS', 'Vue', 'Vue Router (pacchetto)', 'Chart.js (libreria)'],
+                    githubLink: 'https://github.com/Montesi-Yuri/bdevelopers-be',
                     images : [
                         '/bdev-images/bdev-homepage.png',
                         '/bdev-images/bdev-ricerca.png',
@@ -33,7 +34,8 @@ export default {
                 {
                     name: 'Phlox Corporate',
                     goal: "Replicare l'immagine fornita dal designer utilizzando le tecnologie sotto elencate",
-                    tecnologies:['Vue', 'Tailwind CSS'], 
+                    tecnologies:['Vue', 'Tailwind CSS'],
+                    githubLink: 'https://github.com/Montesi-Yuri/proj-html-vuejs', 
                     images : [
                         '/phlox-images/phlox-1.png',
                         '/phlox-images/phlox-2.png',
@@ -149,6 +151,12 @@ export default {
                 </h5>
                 <div class="px-5 mb-1" v-for="tecnology in project.tecnologies">
                     <p>{{ tecnology }}</p>
+                </div>
+                <h5 class="font-bold text-lg mt-5 text-amber-400">
+                    Link Github:
+                </h5>
+                <div class="px-5 mb-1">
+                    <a :href="project.githubLink" class="hover:text-blue-400" target="_blank">Repository</a>
                 </div>
             </div>
             <swiper :pagination="true" :modules="modules" class="mySwiper">

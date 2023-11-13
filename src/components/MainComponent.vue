@@ -13,40 +13,56 @@ export default {
         return{
             projects: [
                 {
-                    name: 'BDeveloper',
-                    goal : "Creare una applicazione web divisa in front office e back office, in cui abbiamo 2 utenti: nel front office l'utente interessato che ha bisogno dei servizi deve essere in grado di ricercare lo sviluppatore in base al campo di lavoro, poterlo contattare e/o lasciare una recensione. Nel back office l'utente registrato può vedere i messaggi ricevuti, le recensioni, le sue statistiche di andamento e modificare le informazioni del suo profilo.",
-                    tecnologies:['Laravel', 'Tailwind CSS', 'Vue', 'Vue Router (pacchetto)', 'Chart.js (libreria)'],
-                    githubLink: 'https://github.com/Montesi-Yuri/bdevelopers-be',
-                    images : [
-                        '/bdev-images/bdev-homepage.png',
-                        '/bdev-images/bdev-ricerca.png',
-                        '/bdev-images/bdev-dashboard.png',
-                        '/bdev-images/bdev-dashboard-light.png',
-                        '/bdev-images/bdev-dashboard-mobile.png',
-                        '/bdev-images/bdev-dashboard-tablet.png',
-                        '/bdev-images/bdev-statistiche.png',
-                        '/bdev-images/bdev-sponsor.png',
-                        '/bdev-images/bdev-sviluppatore.png',
-                        '/bdev-images/bdev-mod.profilo.png',
-                        '/bdev-images/bdev-mod.profilo-2.png',
-                    ]
+                    name: 'Boolzap',
+                    goal : "Creare una web app replica di whatsapp semplificata con messaggi dinamici",
+                    tecnologies:['Vue', 'Bootstrap'],
+                    githubLink: 'https://github.com/Montesi-Yuri/vite-boolflix',
+                    images: [
+                        '/boolzap/images/boolzap.png'
+                    ],
+                    video: '/boolzap/video/boolzap.mkv'
+                },
+                {
+                    name: 'Boolflix',
+                    goal : "Creare una web app dove poter vedere informazioni su film e serie tv tramite ricerca utilizzando l'api di TMBD(https://www.themoviedb.org) riprendendo lo stile da Netflix",
+                    tecnologies:['Vue', 'Bootstrap'],
+                    githubLink: 'https://github.com/Montesi-Yuri/vite-boolflix',
+                    images: [
+                        '/boolflix/images/boolflix.png'
+                    ],
+                    video: '/boolflix/video/boolflix.mkv'
                 },
                 {
                     name: 'Phlox Corporate',
                     goal: "Replicare l'immagine fornita dal designer utilizzando le tecnologie sotto elencate",
                     tecnologies:['Vue', 'Tailwind CSS'],
                     githubLink: 'https://github.com/Montesi-Yuri/proj-html-vuejs', 
-                    images : [
-                        '/phlox-images/phlox-1.png',
-                        '/phlox-images/phlox-2.png',
-                        '/phlox-images/phlox-3.png',
-                        '/phlox-images/phlox-4.png',
-                        '/phlox-images/phlox-5.png',
-                        '/phlox-images/phlox-6.png',
-                        '/phlox-images/phlox-7.png',
-                        '/phlox-images/phlox-8.png',
+                    images: [
+                        '/phlox/images/phlox-1.png',
+                        '/phlox/images/phlox-2.png',
+                        '/phlox/images/phlox-3.png',
+                        '/phlox/images/phlox-4.png',
+                        '/phlox/images/phlox-5.png',
+                        '/phlox/images/phlox-6.png',
+                        '/phlox/images/phlox-7.png',
+                        '/phlox/images/phlox-8.png',
                     ]
-                }
+                },
+                {
+                    name: 'BDeveloper',
+                    goal : "Creare una applicazione web divisa in front office e back office, in cui abbiamo 2 utenti: nel front office l'utente interessato che ha bisogno dei servizi deve essere in grado di ricercare lo sviluppatore in base al campo di lavoro, poterlo contattare e/o lasciare una recensione. Nel back office l'utente registrato può vedere i messaggi ricevuti, le recensioni, le sue statistiche di andamento e modificare le informazioni del suo profilo.",
+                    tecnologies:['Laravel', 'Tailwind CSS', 'Vue', 'Vue Router (pacchetto)', 'Chart.js (libreria)'],
+                    githubLink: 'https://github.com/Montesi-Yuri/bdevelopers-be',
+                    images : [
+                        '/bdev/images/bdev-homepage.png',
+                        '/bdev/images/bdev-ricerca.png',
+                        '/bdev/images/bdev-dashboard.png',
+                        '/bdev/images/bdev-dashboard-light.png',
+                        '/bdev/images/bdev-statistiche.png',
+                        '/bdev/images/bdev-sponsor.png',
+                    ],
+                    video: '/bdev/video/bdev-video.mp4'
+                },
             ]
         }
     },
@@ -62,6 +78,20 @@ export default {
         ],
       };
     },
+    methods:{
+        showProject(projectIndex){
+            let selectedProj = document.getElementById(`${projectIndex}`);
+            selectedProj.classList.remove('hidden');
+            selectedProj.classList.add('flex');
+        },
+        closeAll(){
+            for(let i = 0; i < this.projects.length; i++) {
+                let section = document.getElementById(i);
+                section.classList.remove('flex');
+                section.classList.add('hidden');
+            };
+        }
+    }
 }
 </script>
 
@@ -136,7 +166,25 @@ export default {
         <h1 class="text-3xl text-center font-bold text-white md:mt-12 mt-6">
             Progetti
         </h1>
-        <section class="project" v-for="project in projects">
+        
+
+        <div class="h-40 mt-5 mb-20 relative flex">
+            <template v-for="(singleProject, index) in projects">
+                <div class="absolute group ease-in-out duration-300" :class="`move-${index}`">
+                    <div class="w-40 relative group-hover:-top-24 cursor-pointer " @click="showProject(index)">
+                        <img class="w-full custom-shadow" src="../assets/folder.svg" alt="">
+                        <h3 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold">
+                            {{ singleProject.name }}
+                        </h3>
+                    </div>
+                </div>
+            </template>
+        </div>
+        <div class="flex justify-center">
+            <button @click="closeAll()" class="bg-white font-bold py-2 px-6 rounded-2xl hover:scale-110">Chiudi progetti</button>
+        </div>
+        
+        <section :id="i" class="project hidden flex-wrap p-5 my-8 rounded-2xl" v-for="(project, i) in projects">                           
             <div class="w-full mx-4 text-white">
                 <h2 class="font-bold text-lg mt-4 text-amber-400">Progetto: </h2>
                 <p class="px-5">{{ project.name }}</p>
@@ -158,16 +206,25 @@ export default {
                 <div class="px-5 mb-1">
                     <a :href="project.githubLink" class="hover:text-blue-400" target="_blank">Repository</a>
                 </div>
+                <h5 class="font-bold text-lg mt-5 text-amber-400">
+                    Media:
+                </h5>
             </div>
-            <swiper :pagination="true" :modules="modules" class="mySwiper">
-                <template v-for="image in project.images">
+
+            <swiper :pagination="true" :modules="modules" class="mySwiper sm:w-1/2">
+                <template v-for="(image, i) in project.images">
                     <swiper-slide>
                         <div class="p-5">
-                            <img :src="image" alt="">
+                            <img class=" aspect-video" :src="image" :alt="project.name">
                         </div>
                     </swiper-slide>
                 </template>
             </swiper>
+            <template v-if="project.video">
+                <div class="sm:w-1/2">
+                    <video class="p-5" :src="project.video" muted controls></video>
+                </div>
+            </template>
         </section>
         </div>
     </div>
@@ -176,6 +233,10 @@ export default {
 <style scoped lang="scss">
 @use '../assets/scss/main.scss';
 
+.project{
+    background-color: rgba(7, 7, 7, 0.685);
+    box-shadow: 5px 5px 15px black;
+}
 .my-info{
     padding: 15px;
     border-radius: 16px;
@@ -208,13 +269,28 @@ export default {
     }
 }
 
-.project{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
-    margin: 30px 0px;
-    border-radius: 16px;
-    background-color: rgba(7, 7, 7, 0.685);
-    box-shadow: 5px 5px 15px black;
+
+.move-1{
+    left: 80px;
+    top: 10px;
 }
+.move-2{
+    left: 160px;
+    top: 20px;
+}
+.move-3{
+    left: 240px;
+    top: 30px;
+}.move-4{
+    left: 320px;
+    top: 40px;
+}
+
+.custom-shadow{
+  filter: drop-shadow(0px 5px 15px rgb(19, 19, 19));
+}
+
+
+
+
 </style>

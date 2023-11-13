@@ -16,7 +16,7 @@ export default {
                     name: 'Boolzap',
                     goal : "Creare una web app replica di whatsapp semplificata con messaggi dinamici",
                     tecnologies:['Vue', 'Bootstrap'],
-                    githubLink: 'https://github.com/Montesi-Yuri/vite-boolflix',
+                    githubLink: 'https://github.com/Montesi-Yuri/vue-boolzapp',
                     images: [
                         '/boolzap/images/boolzap.png'
                     ],

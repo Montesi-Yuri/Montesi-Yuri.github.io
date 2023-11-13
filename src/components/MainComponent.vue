@@ -46,7 +46,8 @@ export default {
                         '/phlox/images/phlox-6.png',
                         '/phlox/images/phlox-7.png',
                         '/phlox/images/phlox-8.png',
-                    ]
+                    ],
+                    video: '/phlox/video/phlox.mkv'
                 },
                 {
                     name: 'BDeveloper',
@@ -162,70 +163,72 @@ export default {
                 </a> 
             </div>
         </section>
+
         <div class="container mx-auto md:px-12">
-        <h1 class="text-3xl text-center font-bold text-white md:mt-12 mt-6">
-            Progetti
-        </h1>
-        
+            <h1 class="text-3xl text-center font-bold text-white md:mt-12 mt-6">
+                Progetti
+            </h1>
 
-        <div class="h-40 mt-5 mb-20 relative flex">
-            <template v-for="(singleProject, index) in projects">
-                <div class="absolute group ease-in-out duration-300" :class="`move-${index}`">
-                    <div class="w-40 relative group-hover:-top-24 cursor-pointer " @click="showProject(index)">
-                        <img class="w-full custom-shadow" src="../assets/folder.svg" alt="">
-                        <h3 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold">
-                            {{ singleProject.name }}
-                        </h3>
-                    </div>
-                </div>
-            </template>
-        </div>
-        <div class="flex justify-center">
-            <button @click="closeAll()" class="bg-white font-bold py-2 px-6 rounded-2xl hover:scale-110">Chiudi progetti</button>
-        </div>
-        
-        <section :id="i" class="project hidden flex-wrap p-5 my-8 rounded-2xl" v-for="(project, i) in projects">                           
-            <div class="w-full mx-4 text-white">
-                <h2 class="font-bold text-lg mt-4 text-amber-400">Progetto: </h2>
-                <p class="px-5">{{ project.name }}</p>
-
-                <h5 class="font-bold text-lg mt-4 text-amber-400">Obbiettivo:</h5>
-                <p class="font-normal px-5">
-                    {{ project.goal }}
-                </p>
-
-                <h5 class="font-bold text-lg mt-5 text-amber-400">
-                    Tecnologie utilizzate:
-                </h5>
-                <div class="px-5 mb-1" v-for="tecnology in project.tecnologies">
-                    <p>{{ tecnology }}</p>
-                </div>
-                <h5 class="font-bold text-lg mt-5 text-amber-400">
-                    Link Github:
-                </h5>
-                <div class="px-5 mb-1">
-                    <a :href="project.githubLink" class="hover:text-blue-400" target="_blank">Repository</a>
-                </div>
-                <h5 class="font-bold text-lg mt-5 text-amber-400">
-                    Media:
-                </h5>
-            </div>
-
-            <swiper :pagination="true" :modules="modules" class="mySwiper sm:w-1/2">
-                <template v-for="(image, i) in project.images">
-                    <swiper-slide>
-                        <div class="p-5">
-                            <img class=" aspect-video" :src="image" :alt="project.name">
+            <div class="h-40 mt-5 mb-20 relative flex">
+                <template v-for="(singleProject, index) in projects">
+                    <div class="absolute group ease-in-out duration-300" :class="`move-${index}`">
+                        <div class="w-40 relative group-hover:-top-24 cursor-pointer " @click="showProject(index)">
+                            <img class="w-full custom-shadow" src="/folder.svg" alt="">
+                            <h3 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold">
+                                {{ singleProject.name }}
+                            </h3>
                         </div>
-                    </swiper-slide>
+                    </div>
                 </template>
-            </swiper>
-            <template v-if="project.video">
-                <div class="sm:w-1/2">
-                    <video class="p-5" :src="project.video" muted controls></video>
+            </div>
+            <div class="flex justify-center">
+                <button @click="closeAll()" class="bg-white font-bold py-2 px-6 rounded-2xl hover:scale-110">Chiudi progetti</button>
+            </div>
+            
+            <section :id="i" class="project hidden flex-wrap p-5 my-8 rounded-2xl" v-for="(project, i) in projects">                           
+                <div class="w-full mx-4 text-white">
+                    <h2 class="font-bold text-lg mt-4 text-amber-400">Progetto: </h2>
+                    <p class="px-5">{{ project.name }}</p>
+
+                    <h5 class="font-bold text-lg mt-4 text-amber-400">Obbiettivo:</h5>
+                    <p class="font-normal px-5">
+                        {{ project.goal }}
+                    </p>
+
+                    <h5 class="font-bold text-lg mt-5 text-amber-400">
+                        Tecnologie utilizzate:
+                    </h5>
+                    <div class="px-5 mb-1" v-for="tecnology in project.tecnologies">
+                        <p>{{ tecnology }}</p>
+                    </div>
+                    <h5 class="font-bold text-lg mt-5 text-amber-400">
+                        Link Github:
+                    </h5>
+                    <div class="px-5 mb-1">
+                        <a :href="project.githubLink" class="hover:text-blue-400" target="_blank">Repository</a>
+                    </div>
+                    <h5 class="font-bold text-lg mt-5 text-amber-400">
+                        Media:
+                    </h5>
                 </div>
-            </template>
-        </section>
+
+                <swiper :pagination="true" :modules="modules" class="mySwiper sm:w-1/2">
+                    <template v-for="(image, i) in project.images">
+                        <swiper-slide>
+                            <div class="p-5">
+                                <img class=" aspect-video" :src="image" :alt="project.name">
+                            </div>
+                        </swiper-slide>
+                    </template>
+                </swiper>
+
+                <template v-if="project.video">
+                    <div class="sm:w-1/2">
+                        <video class="p-5" :src="project.video" muted controls></video>
+                    </div>
+                </template>
+
+            </section>
         </div>
     </div>
 </template>
